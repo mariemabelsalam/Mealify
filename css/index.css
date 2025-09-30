@@ -1,0 +1,238 @@
+:root {
+  --main-color: #e61414;
+  --main-transition: all 1s;
+  --dark-color: rgb(55, 55, 63);
+  --secondary-color: rgb(127, 127, 144);
+}
+.bg-main-color {
+  background-color: #eeeeee;
+}
+h1,
+h2 {
+  font-family: "Amatic SC", sans-serif;
+}
+h1 {
+  font-size: 4.0625rem;
+  color: var(--dark-color);
+}
+h2 {
+  font-size: 3.125rem;
+}
+h3 {
+  font-family: "Inter", sans-serif;
+  font-weight: 700;
+  font-size: 19px;
+}
+header nav span {
+  color: var(--main-color);
+}
+header nav .collapse .navbar-nav .nav-item a {
+  font-weight: 600;
+  font-size: 1.0625rem;
+}
+header nav .collapse .underline a {
+  position: relative;
+}
+
+header nav .collapse .underline a::after {
+  content: "";
+  width: 0px;
+  height: 2px;
+  background-color: var(--main-color);
+  position: absolute;
+  top: 80%;
+  left: 16%;
+  transition: var(--main-transition);
+}
+header nav .collapse .navbar-nav .nav-item a:hover::after {
+  width: 75%;
+}
+
+header .home .image img:hover {
+  animation: shake 0.5s;
+  animation-iteration-count: infinite;
+}
+header .home .content .rounded-button {
+  background-color: var(--main-color);
+  border-radius: 2px 60px 60px 70px;
+  padding: 11px;
+}
+header .home .content p {
+  color: rgb(79, 79, 90);
+}
+
+.my-ancors {
+  gap: 25px;
+}
+.coon i {
+  width: 35px;
+  height: 35px;
+  background-color: white;
+}
+.icon-anc {
+  padding: 7px;
+  background: linear-gradient(
+    to right,
+    var(--main-color) 0% 50%,
+    transparent 50% 100%
+  );
+}
+.watch-anc p {
+  font-weight: 600;
+}
+
+main .special {
+  font-family: "Inter", sans-serif;
+  font-size: 14px;
+  color: var(--secondary-color);
+}
+main .heading h2 span {
+  color: var(--main-color);
+}
+main .chefs .card-body span,
+main .chefs .card-body p {
+  font-size: 14px;
+  color: var(--secondary-color);
+}
+main .chefs .card-body p {
+  font-size: 15px;
+}
+main .chefs .links i {
+  cursor: pointer;
+  font-size: 18px;
+  color: rgba(0, 0, 0, 0.5);
+  transition: var(--main-transition);
+}
+main .chefs .links i:hover {
+  color: black;
+}
+main .chefs .links {
+  left: 100%;
+  transition: all 1s 1s;
+}
+main .chefs .card {
+  transition: var(--main-transition);
+}
+main .chefs .card:hover {
+  transform: scale(1.06);
+}
+
+main .chefs .card:hover .links {
+  left: 80%;
+}
+
+main .gallery .content .image .layer {
+  top: 120%;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.6);
+  transition: var(--main-transition);
+}
+main .gallery .content .image:hover .layer {
+  top: 0;
+}
+main .contact i {
+  font-size: 18px;
+}
+main .contact .icon {
+  width: 50px;
+  height: 50px;
+  background-color: var(--main-color);
+}
+main .contact h3 {
+  font-size: 20px;
+  color: rgb(125, 125, 125);
+}
+form {
+  box-shadow: 0 0 1.875rem #00000014;
+}
+.form-control:focus {
+  box-shadow: none;
+  border-color: var(--main-color);
+}
+main .contact form input,
+main .contact form textarea {
+  border: 1.5px solid rgba(0, 0, 0, 0.5);
+}
+
+footer {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+    url(../images/textured-metal-background.jpg);
+  background-position: center center;
+  background-size: cover;
+}
+
+footer .image img {
+  width: 50px;
+}
+footer .content .fs-30 {
+  font-size: 30px;
+}
+footer .content .fs-30 span {
+  color: var(--main-color);
+}
+
+footer i {
+  cursor: pointer;
+}
+footer button {
+  background-color: var(--main-color);
+}
+footer .content li {
+  cursor: pointer;
+  transition: var(--main-transition);
+}
+
+footer .content li:hover {
+  background-color: #222222;
+  transform: translate(10px);
+}
+footer .icons i {
+  color: var(--main-color);
+}
+
+@keyframes shake {
+  0% {
+    transform: translate(1px, 1px) rotate(0deg);
+  }
+  10% {
+    transform: translate(-1px, -2px) rotate(-1deg);
+  }
+  20% {
+    transform: translate(-3px, 0px) rotate(1deg);
+  }
+  30% {
+    transform: translate(3px, 2px) rotate(0deg);
+  }
+  40% {
+    transform: translate(1px, -1px) rotate(1deg);
+  }
+  50% {
+    transform: translate(-1px, 2px) rotate(-1deg);
+  }
+  60% {
+    transform: translate(-3px, 1px) rotate(0deg);
+  }
+  70% {
+    transform: translate(3px, 1px) rotate(-1deg);
+  }
+  80% {
+    transform: translate(-1px, -1px) rotate(1deg);
+  }
+  90% {
+    transform: translate(1px, 2px) rotate(0deg);
+  }
+  100% {
+    transform: translate(1px, -2px) rotate(-1deg);
+  }
+}
+
+@media (max-width: 976px) {
+  header nav .collapse .underline a::after {
+    left: 0%;
+  }
+  header nav .collapse .navbar-nav .nav-item a:hover::after {
+    width: 12%;
+  }
+}
